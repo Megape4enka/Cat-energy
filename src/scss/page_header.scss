@@ -1,0 +1,212 @@
+.navigation {
+  margin: 24px 30px 0 30px;
+}
+
+.header {
+  position: relative;
+
+  @include lg {
+    &--index {
+      z-index: 0;
+
+      &::before {
+        position: absolute;
+        content: "";
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: calc(50% + 40px);
+        background-color: #63a73a;
+        background-image: url('../images/content/index-background-desktop@1x.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: right center;
+        z-index: -1;
+
+        @include retina {
+          background-image: url('../images/content/index-background-desktop@2x.jpg');
+        }
+      }
+    }
+  }
+}
+
+.nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav__logo div {
+  background-image: url('../images/design/logo-mobile.svg');
+  background-repeat: no-repeat;
+  width: 182px;
+  height: 37px;
+  padding: 0;
+
+  @include md {
+    background-image: url('../images/design/logo-tablet.svg');
+    width: 174px;
+    height: 52px;
+  }
+
+  @include lg {
+    background-image: url('../images/design/logo-desktop.svg');
+    width: 100%;
+    height: 100px;
+  }
+}
+
+.nav__toggle {
+  position: absolute;
+  top: 12px;
+  right: 15px;
+  z-index: 2;
+  display: block;
+  width: 60px;
+  height: 40px;
+  padding: 0;
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+
+  @include md {
+    display: none;
+  }
+
+  @include lg {
+    display: none;
+  }
+}
+
+.nav--opened::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 10px;
+  width: 28px;
+  height: 2px;
+  background-color: #000000;
+  -webkit-box-shadow: 0 9px 0 0 #000000, 0 18px 0 0 #000000;
+  box-shadow: 0 8px 0 0 #000000, 0 16px 0 0 #000000;
+}
+
+.nav--opened:active::before {
+  background-color: rgba(255, 255, 255, 0.3);
+  -webkit-box-shadow: 0 9px 0 0 rgba(255, 255, 255, 0.3), 0 18px 0 0 rgba(255, 255, 255, 0.3);
+  box-shadow: 0 9px 0 0 rgba(255, 255, 255, 0.3), 0 18px 0 0 rgba(255, 255, 255, 0.3);
+}
+
+.nav--closed {
+  top: 0;
+  right: 0;
+}
+
+.nav--closed::before, .nav--closed::after {
+  content: "";
+  position: absolute;
+  top: 8px;
+  right: 10px;
+  width: 29px;
+  height: 2px;
+  background-color: #000000;
+}
+
+.nav--closed::before {
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+.nav--closed::after {
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+.nav--closed:active::before, .nav--closed:active::after {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.closed {
+  display: none;
+}
+
+.showMenu {
+  transform: translateY(148px);
+  z-index: 10;
+}
+
+.nav__wrapper {
+  position: absolute;
+  top: -81px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100vh;
+  transform: translateY(-100%);
+  transition: transform 0.2s;
+
+  @include md {
+    position: static;
+    transform: translateY(0);
+    height: auto;
+    display: flex;
+    width: 620px;
+    justify-content: space-between;
+  }
+  @include lg {
+    position: static;
+    transform: translateY(0);
+    height: auto;
+    display: flex;
+    width: 620px;
+    justify-content: space-between;
+  }
+}
+
+.nav__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  @include md {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 440px;
+  }
+
+  @include lg {
+    display: flex;
+    width: 620px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+}
+
+.site-list a {
+  position: relative;
+  display: block;
+  padding: 22px 0;
+  font-family: inherit;
+  font-size: 20px;
+  line-height: 1;
+  text-align: center;
+  color: #000000;
+  text-transform: uppercase;
+  text-decoration: none;
+  background-color: #ffffff;
+  border-bottom: 1px solid #E6E6E6;
+  border-top: 1px solid #E6E6E6;
+
+  @include lg {
+    position: static;
+    font-weight: 500;
+    text-transform: none;
+    border: none;
+    background: transparent;
+  }
+}

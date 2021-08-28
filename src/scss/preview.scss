@@ -1,0 +1,58 @@
+.preview {
+  background-image:
+          linear-gradient(to top, #ffffff 97px, transparent 97px),
+          url("../images/content/index-background-mobile@1x.jpg"),
+          linear-gradient(to top, #ffffff 197px, #61a63c 197px);
+  background-repeat: no-repeat;
+  background-position: top;
+  background-color: #61a63c;
+  background-size: 100%;
+
+  @include retina {
+    background-image:
+            linear-gradient(to top, #ffffff 97px, transparent 97px),
+            url("../images/content/index-background-mobile@2x.jpg"),
+            linear-gradient(to top, #ffffff 197px, #61a63c 197px);
+  }
+
+  @include md {
+    background: #ffffff;
+  }
+
+  @include lg {
+    background: transparent;
+    min-height: 560px;
+  }
+}
+
+.preview__title {
+  font-family: 'Oswald', sans-serif;
+  font-size: 36px;
+  line-height: 1;
+  color: #ffffff;
+  text-align: center;
+  padding: 25px 27px;
+
+  @include md {
+    color: #000000;
+
+  }
+}
+
+.preview__text {
+  font-family: 'Oswald', sans-serif;
+  font-size: 14px;
+  text-align: center;
+  font-style: inherit;
+  padding-bottom: 29px;
+}
+
+.preview__image-food {
+  display: flex;
+  justify-content: center;
+}
+
+.preview__button {
+  text-transform: uppercase;
+}
+
