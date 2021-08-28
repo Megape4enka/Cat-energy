@@ -1,6 +1,4 @@
 // ### Reset ###
-html,
-body,
 div,
 span,
 applet,
@@ -15,7 +13,6 @@ h6,
 p,
 blockquote,
 pre,
-a,
 abbr,
 acronym,
 address,
@@ -86,10 +83,6 @@ video {
   vertical-align: baseline;
 }
 
-html {
-  box-sizing: border-box;
-}
-
 *,
 *:before,
 *:after {
@@ -122,9 +115,19 @@ video {
 }
 
 // Addresses margins handled incorrectly in IE6/7
+html,
 body {
+  font-family: $oswald;
+  font-weight: 400;
+  font-size: 16px;
+  font-style: normal;
+  line-height: 1;
+  box-sizing: border-box;
+  min-width: 320px;
   margin: 0;
-  font-family: 'oswaldmedium', serif;
+  padding: 0;
+  background-color: #ffffff;
+  user-select: none;
 }
 
 // Remove list item style
@@ -134,8 +137,9 @@ ul {
 
 // Remove the gray background color from active links in IE 10.
 a {
-  background: transparent;
+  color: #111111;
   text-decoration: none;
+  text-transform: uppercase;
 }
 
 // Addresses FF3/4 setting line-height on 'input' using !important in the UA stylesheet
@@ -169,9 +173,8 @@ textarea {
   overflow: auto; // 1
   vertical-align: top; // 2
 }
-
+source,
 img {
-  display: block;
   max-width: 100%;
   height: auto;
 }
@@ -187,6 +190,21 @@ input {
   appearance: none;
 }
 
+.container {
+  margin: 0 auto;
+  padding: 0 $mobile-pads;
+  min-width: 320px;
+  box-sizing: border-box;
+  @include md {
+    padding: 0 $tablet-pads;
+  }
+
+  @include lg {
+    padding: 0 $desktop-pads;
+    max-width: $desktop-width;
+  }
+}
+
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -200,16 +218,11 @@ input {
   overflow: hidden;
 }
 
-.page {
-  font-size: 18px;
-  height: 100%;
-  color: #ffffff;
-  line-height: 24px;
-  font-family: "oswaldmedium", "oswaldregular", sans-serif;
-}
-
-.page__body {
-  margin: 0 auto;
-  min-height: 100%;
-  color: #ffffff;
+.full-width {
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
 }

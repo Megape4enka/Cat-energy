@@ -5,18 +5,18 @@
     <title>Home page</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
-  <body class="page__body">
+  <body>
 
-  <header class="header header--index">
+  <header class="page-header page-header--index">
+    <div class="page-header__wrapper container">
 
-    <div class="page-header__wrapper">
-      <a class="link page-header__logo-image">
+      <a class="page-header__logo" href="index.html">
         <picture>
-          <source media="(min-width: 1280px)" srcset="images/design/logo-desktop.svg">
-          <source media="(min-width: 768px)" srcset="images/design/logo-tablet.svg">
-          <img src="images/design/logo-mobile.svg" alt="Логотип Cat Energy Стилизованый кот в маске" width="33" height="38">
+          <source media="(min-width: 1280px)" srcset="images/content/logo-desktop.svg">
+          <source media="(min-width: 768px)" srcset="images/content/logo-tablet.svg">
+          <img class="page-header__logo-img" src="images/content/logo-mobile.svg" alt="Логотип Cat Energy Стилизованый кот в маске" width="33" height="38">
         </picture>
-        <svg width="101" height="18" viewBox="0 0 101 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg class="page-header__logo-title" width="101" height="18" viewBox="0 0 101 18" fill="none" xmlns="http://www.w3.org/2000/svg">
           <g clip-path="url(#clip0)">
             <path d="M1.26449 16.5385C0.36955 15.2762 -0.0747041 13.7627 1.02073e-05 12.2308V5.84615C-0.108365 4.29774 0.308071 2.75746 1.18546 1.46154C2.05478 0.461538 3.39829 0 5.37403 0C7.34978 0 8.61425 0.461538 9.40455 1.30769C10.2626 2.37941 10.6846 3.72136 10.59 5.07692V6.61539H6.71754V4.84615C6.74881 4.32289 6.66808 3.799 6.48045 3.30769C6.38016 3.10938 6.2212 2.9448 6.02403 2.83513C5.82686 2.72547 5.60049 2.67572 5.37403 2.69231C4.82082 2.69231 4.42568 2.84615 4.26762 3.23077C4.08883 3.77733 4.00862 4.34988 4.03053 4.92308V13.1538C3.98879 13.71 4.0978 14.267 4.34665 14.7692C4.5047 15.1538 4.89985 15.3077 5.45306 15.3077C6.00627 15.3077 6.32239 15.1538 6.48045 14.7692C6.66013 14.2494 6.74049 13.7019 6.71754 13.1538V11.3077H10.59V12.8462C10.6704 14.2238 10.2508 15.5852 9.40455 16.6923C8.61425 17.6154 7.27075 18.0769 5.37403 18.0769C3.47732 18 2.05478 17.5385 1.26449 16.5385Z" fill="#111111"/>
             <path d="M15.2527 0.23077H19.7574L23.0767 17.7692H19.4413L18.8091 14.0769H16.2011L15.5689 17.7692H11.8545L15.2527 0.23077ZM18.493 11.7692L17.5446 4.92308L16.5963 11.7692H18.493Z" fill="#111111"/>
@@ -35,33 +35,41 @@
           </defs>
         </svg>
       </a>
+
+      <nav class="main-nav main-nav--no-js">
+
+        <button class="main-nav__toggle toggle" type="button">
+          <span class="visually-hidden">Показать/Скрыть Меню</span>
+          <span class="toggle__btn"></span>
+        </button>
+
+        <ul class="main-nav__list main-nav__list--index">
+          <li class="main-nav__item">
+            <a class="main-nav__link main-nav__link--active" href="#">Главная</a>
+          </li>
+          <li class="main-nav__item">
+            <a class="main-nav__link" href="catalog.html">Каталог продукции</a>
+          </li>
+          <li class="main-nav__item">
+            <a class="main-nav__link" href="form.html">Подбор программы</a>
+          </li>
+        </ul>
+
+      </nav>
+
     </div>
 
-    <section class="navigation">
-      <nav class="main-nav main-nav--no-js">
-        <button class="nav__toggle" type="button">
-          <span class="closed nav--closed"></span>
-          <span class="opened nav--opened"></span>
-        </button>
-        <div class="nav__wrapper">
-          <ul class="nav__list">
-            <li class="nav__item"><a href="index.html">Главная</a></li>
-            <li class="nav__item"><a href="catalog.html">Каталог продукции</a></li>
-            <li class="nav__item"><a href="selection.html">Подбор программы</a></li>
-          </ul>
-        </div>
-      </nav>
-    </section>
-
-    <section class="preview">
-      <h1 class="preview__title">Функцианальное питание для котов</h1>
-      <p class="preview__text">Занялся собой? Займись котом!</p>
-      <picture class="preview__image-food">
-        <source media="(min-width: 1200px)" srcset="images/content/index-can-desktop@1x.png, images/content/index-can-desktop@2x.png  2x">
-        <source media="(min-width: 768px)" srcset="images/content/index-can-tablet@1x.jpg, images/content/index-can-tablet@2x.jpg 2x">
-        <img src="images/content/index-can-mobile@1x.png" srcset="images/content/index-can-mobile@2x.png 2x" alt="фон сайта">
-      </picture>
-      <a class="button preview__button" href="selection.html">Подобрать программу</a>
+    <section class="promo">
+      <div class="promo__wrapper container">
+        <h2 class="promo__content promo__title">Функцианальное<br> питание для котов</h2>
+        <p class="promo__content promo__text">Занялся собой? Займись котом!</p>
+        <picture class="promo__img-food">
+          <source media="(min-width: 1200px)" srcset="images/content/index-can-desktop@1x.png, images/content/index-can-desktop@2x.png  2x">
+          <source media="(min-width: 768px)" srcset="images/content/index-can-tablet@1x.jpg, images/content/index-can-tablet@2x.jpg 2x">
+          <img class="promo__img" src="images/content/index-can-mobile@1x.png" srcset="images/content/index-can-mobile@2x.png 2x" alt="фон сайта">
+        </picture>
+        <a class="btn promo__content promo__btn" href="form.html">Подобрать программу</a>
+      </div>
     </section>
 
   </header>
@@ -75,9 +83,9 @@
           Ваш кот весит больше собаки и почти утратил способность лазить по деревьям?
           Пора на диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.
         </p>
-        <button class="button program__button">
+        <a class="program__link">
           Каталог SLIM
-        </button>
+        </a>
       </div>
       <div class="program__item">
         <h2 class="program__title">Набор массы</h2>
@@ -85,9 +93,9 @@
           Заработать авторитет среди дворовых котов и даже собак?
           Серия Cat Energy Pro поможет вашему коту нарастить необходимые мышцы!
         </p>
-        <button class="button program__button">
+        <a class="program__link">
           Каталог PRO
-        </button>
+        </a>
       </div>
     </section>
 

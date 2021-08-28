@@ -31,7 +31,7 @@ module.exports = {
   output: {
     filename: 'js/[name].js',
     path: environment.paths.output,
-    assetModuleFilename: "images/[hash][ext][query]"
+    assetModuleFilename: "images/[hash][ext][query]",
   },
   module: {
     rules: [
@@ -45,18 +45,10 @@ module.exports = {
         use: ['babel-loader'],
       },
       {
-        test: /\.(png|gif|jpe?g|svg)$/i,
-        type: 'asset',
+        test: /\.(png|jpg|jpeg|gif|ico|svg)$/,
         use: [
-          {
-            loader: 'url-loader',
-            options: {
-              name: 'images/design/[name].[hash:6].[ext]',
-              publicPath: '../',
-              limit: environment.limits.images,
-            },
-          },
-        ],
+          'file-loader'
+        ]
       },
       {
         test: /\.(eot|ttf|woff|woff2)$/,

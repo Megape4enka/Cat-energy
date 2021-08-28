@@ -1,28 +1,43 @@
-/* Core variables */
-@import 'base/vars';
+// Подключает шрифты
+@import "global/fonts";
 
-/* CSS Reset */
-@import 'base/reset';
+// Основные переменные
+@import "global/vars";
 
-/* CSS print */
-@import 'base/print';
+// Миксины (Примеси)
+@import "global/mixins";
 
-/* Fonts */
-@import 'base/fonts';
+// Простая анимация
+@import "global/animation";
 
-/* Mixins, helpers and functions */
-@import 'base/mixins';
-
-/* Vendor */
-
-/* Components */
-
-/* Browser specific styles */
-@import 'dirty/hacks';
+// Базовые параметры страницы
+@import "global/reset";
 
 // Общие блоки
-@import "page_header";
-@import "button";
+@import "blocks/common/page-header";
+@import "blocks/common/page-footer";
+@import "blocks/common/main-nav";
+@import "blocks/common/toggle";
+@import "blocks/common/btn";
+@import "blocks/common/contacts";
+@import "blocks/common/copyright";
+@import "blocks/common/social";
 
-// Главная страница
-@import "preview";
+//// Главная страница
+//@import "blocks/index/achievement";
+//@import "blocks/index/example";
+//@import "blocks/index/features";
+//@import "blocks/index/program";
+@import "blocks/index/promo";
+//@import "blocks/index/slider";
+//
+//// Страница каталога
+//@import "blocks/catalog/catalog";
+//@import "blocks/catalog/extra-goods";
+//@import "blocks/catalog/product";
+//@import "blocks/catalog/more-products";
+//@import "blocks/catalog/promotion";
+//
+//// Страница заказа (Страница формы)
+//@import "blocks/form/program-form";
+//@import "blocks/form/form-section";
