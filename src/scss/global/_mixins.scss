@@ -30,6 +30,11 @@
     @content;
   }
 }
+@mixin mdr {
+  @media (min-width: $laptop-width) {
+    @content;
+  }
+}
 @mixin lg {
   @media (min-width: $desktop-width) {
     @content;
