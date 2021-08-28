@@ -143,31 +143,66 @@
     </section>
 
     <section class="example">
-      <h2 class="example__title">Живой пример</h2>
-      <p class="example__text">
-        Борис сбросил 5 кг за 2 месяца, просто заменив
-        свой обычный корм на Cat Energy Slim.
-        Отличный результат без изнуряющих тренировок!
-        При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.
-      </p>
-      <div class="example__description">
-        <div class="example__description-item example__description-weight">5кг</div>
-        <div class="example__description-item example__description-days">60 дней</div>
-        <div class="example__description-price">Затраты на питание: 15 000 РУБ. </div>
-      </div>
-      <div class="example__after-before">
-        <picture class="example__before">
-          <source media="(min-width: 1200px)" srcset="images/content/before-desktop@1x.png, images/content/before-desktop@2x.png 2x">
-          <source media="(min-width: 768px)" srcset="images/content/before-tablet@1x.png, images/content/before-tablet@2x.png 2x">
-          <img src="images/content/before-mobile@1x.png" srcset="images/content/before-mobile@2x.png 2x" alt="кот до похуения">
-        </picture>
-        <picture class="example__after">
-          <source media="(min-width: 1200px)" srcset="images/content/after-desktop@1x.png, images/content/after-desktop@2x.png 2x">
-          <source media="(min-width: 768px)" srcset="images/content/after-tablet@1x.png, images/content/after-tablet@2x.png 2x">
-          <img src="images/content/after-mobile@1x.png" srcset="images/content/after-mobile@2x.png 2x" alt="кот который похудел">
-        </picture>
-        <label for="range"></label>
-        <input class="range" id="range" type="range" min="0" max="100" value="50" >
+      <div class="example__wrapper container">
+
+        <div class="example__content">
+          <h2 class="example__title">Живой пример</h2>
+          <p class="example__text">
+            Борис сбросил 5 кг за 2 месяца, просто заменив
+            свой обычный корм на Cat Energy Slim.
+            Отличный результат без изнуряющих тренировок!
+            При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.
+          </p>
+
+          <div class="example__data">
+            <div class="example__achievements">
+
+              <div class="achievement">
+                <span class="achievement__title">Снижение<br> веса</span>
+                <span class="achievement__value">5 кг</span>
+              </div>
+
+              <div class="achievement">
+                <span class="achievement__title">Затрачено<br> времени</span>
+                <span class="achievement__value">60 дней</span>
+              </div>
+
+            </div>
+
+            <p class="example__costs">
+              Затраты на питание:
+              <span class="example__costs-amount">15 000 руб.</span>
+            </p>
+          </div>
+        </div>
+
+        <div class="slider">
+
+          <input type="radio" id="before" class="slider__before visually-hidden" name="image-toggle">
+          <input type="radio" id="after" class="slider__after visually-hidden" name="image-toggle">
+
+          <div class="slider__images">
+
+            <div class="slider__image slider__image--before">
+              <picture>
+                <source media="(min-width: 1300px)" srcset="images/content/before-desktop@1x.png, images/content/before-desktop@2x.png 2x">
+                <source media="(min-width: 768px)" srcset="images/content/before-tablet@1x.png, images/content/before-tablet@2x.png 2x">
+                <img src="images/content/before-mobile@1x.png" srcset="images/content/before-mobile@2x.png 2x" width="320" height="240" alt="Толстый кот">
+              </picture>
+            </div>
+
+            <div class="slider__image slider__image--after">
+              <picture>
+                <source media="(min-width: 1300px)" srcset="images/content/after-desktop@1x.png, images/content/after-desktop@2x.png 2x">
+                <source media="(min-width: 768px)" srcset="images/content/after-tablet@1x.png, images/content/after-tablet@2x.png 2x">
+                <img src="images/content/after-mobile@1x.png" srcset="images/content/after-mobile@2x.png 2x" width="320" height="240" alt="Худой кот">
+              </picture>
+            </div>
+
+          </div>
+
+        </div>
+
       </div>
     </section>
 
