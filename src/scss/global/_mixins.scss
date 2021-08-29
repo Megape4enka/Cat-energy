@@ -20,6 +20,11 @@
   transform: translate(-50%, -50%);
 }
 
+@mixin bgsm {
+  @media (max-width: $bgmobile-width) {
+    @content;
+  }
+}
 @mixin sm {
   @media (max-width: $mobile-width-only) {
     @content;

@@ -23,21 +23,21 @@
 @import "blocks/common/copyright";
 @import "blocks/common/social";
 
-//// Главная страница
+// Главная страница
 @import "blocks/index/achievement";
 @import "blocks/index/example";
 @import "blocks/index/features";
 @import "blocks/index/program";
 @import "blocks/index/promo";
 @import "blocks/index/slider";
-//
-//// Страница каталога
-//@import "blocks/catalog/catalog";
-//@import "blocks/catalog/extra-goods";
-//@import "blocks/catalog/product";
-//@import "blocks/catalog/more-products";
-//@import "blocks/catalog/promotion";
-//
+
+// Страница каталога
+@import "blocks/catalog/catalog";
+@import "blocks/catalog/extra-goods";
+@import "blocks/catalog/product";
+@import "blocks/catalog/more-products";
+@import "blocks/catalog/promotion";
+
 //// Страница заказа (Страница формы)
 //@import "blocks/form/program-form";
 //@import "blocks/form/form-section";
