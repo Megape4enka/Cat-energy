@@ -63,12 +63,12 @@
       <div class="promo__wrapper container">
         <h2 class="promo__content promo__title">Функцианальное<br> питание для котов</h2>
         <p class="promo__content promo__text">Занялся собой? Займись котом!</p>
-        <picture class="promo__img-food">
+        <picture class="promo__img-wrapper">
           <source media="(min-width: 1200px)" srcset="images/content/index-can-desktop@1x.png, images/content/index-can-desktop@2x.png  2x">
           <source media="(min-width: 768px)" srcset="images/content/index-can-tablet@1x.jpg, images/content/index-can-tablet@2x.jpg 2x">
           <img class="promo__img" src="images/content/index-can-mobile@1x.png" srcset="images/content/index-can-mobile@2x.png 2x" alt="фон сайта">
         </picture>
-        <a class="btn promo__content promo__btn" href="form.html">Подобрать программу</a>
+        <a class="promo__content promo__btn btn" href="form.html">Подобрать программу</a>
       </div>
     </section>
 
@@ -144,14 +144,11 @@
 
     <section class="example">
       <div class="example__wrapper container">
-
         <div class="example__content">
           <h2 class="example__title">Живой пример</h2>
           <p class="example__text">
-            Борис сбросил 5 кг за 2 месяца, просто заменив
-            свой обычный корм на Cat Energy Slim.
-            Отличный результат без изнуряющих тренировок!
-            При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.
+            Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат
+            без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.
           </p>
 
           <div class="example__data">
@@ -177,7 +174,6 @@
         </div>
 
         <div class="slider">
-
           <input type="radio" id="before" class="slider__before visually-hidden" name="image-toggle">
           <input type="radio" id="after" class="slider__after visually-hidden" name="image-toggle">
 
@@ -185,32 +181,29 @@
 
             <div class="slider__image slider__image--before">
               <picture>
-                <source media="(min-width: 1300px)" srcset="images/content/before-desktop@1x.png, images/content/before-desktop@2x.png 2x">
-                <source media="(min-width: 768px)" srcset="images/content/before-tablet@1x.png, images/content/before-tablet@2x.png 2x">
+                <source media="(min-width: 1300px)" srcset="images/content/before-desktop@1x.png 1x, images/content/before-desktop@2x.png 2x">
+                <source media="(min-width: 768px)" srcset="images/content/before-tablet@1x.png 1x, images/content/before-tablet@2x.png 2x">
                 <img src="images/content/before-mobile@1x.png" srcset="images/content/before-mobile@2x.png 2x" width="320" height="240" alt="Толстый кот">
               </picture>
             </div>
 
             <div class="slider__image slider__image--after">
               <picture>
-                <source media="(min-width: 1300px)" srcset="images/content/after-desktop@1x.png, images/content/after-desktop@2x.png 2x">
-                <source media="(min-width: 768px)" srcset="images/content/after-tablet@1x.png, images/content/after-tablet@2x.png 2x">
+                <source media="(min-width: 1300px)" srcset="images/content/after-desktop@1x.png 1x, images/content/after-desktop@2x.png 2x">
+                <source media="(min-width: 768px)" srcset="images/content/after-tablet@1x.png 1x, images/content/after-tablet@2x.png 2x">
                 <img src="images/content/after-mobile@1x.png" srcset="images/content/after-mobile@2x.png 2x" width="320" height="240" alt="Худой кот">
               </picture>
             </div>
-
-            <div class="slider__actions">
-              <label for="before" class="slider__btn slider__btn--before">Было</label>
-              <div class="slider__scale">
-                <div class="slider__grip"></div>
-              </div>
-              <label for="after" class="slider__btn slider__btn--after">Стало</label>
-            </div>
-
           </div>
 
+          <div class="slider__actions">
+            <label for="before" class="slider__btn slider__btn--before">Было</label>
+            <div class="slider__scale">
+              <div class="slider__grip"></div>
+            </div>
+            <label for="after" class="slider__btn slider__btn--after">Стало</label>
+          </div>
         </div>
-
       </div>
     </section>
 

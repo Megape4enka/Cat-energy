@@ -26,7 +26,7 @@
   }
 }
 @mixin sm {
-  @media (max-width: $mobile-width-only) {
+  @media (max-width: $mobile-width) {
     @content;
   }
 }
