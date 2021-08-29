@@ -1,0 +1,47 @@
+.copyright {
+  box-sizing: content-box;
+
+  @include md {
+    padding-top: 5px; //20px
+  }
+
+  @include lg {
+    padding-top: 0;
+  }
+}
+
+.copyright__link {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: "Arial", sans-serif;
+  text-decoration: none;
+  color: $darkgrey;
+  text-transform: none;
+
+  @include mdr {
+    justify-content: center;
+  }
+
+  &:hover .copyright__logo {
+    fill: $green;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.copyright__logo {
+  width: 27px;
+  height: 34px;
+  fill: #666666;
+
+  @include mdr {
+    margin-left: 28px;
+  }
+
+  @include md {
+    margin-left: 22px;
+  }
+}
